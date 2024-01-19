@@ -9,22 +9,20 @@
  * @size: the size of the array
  */
 
-void print_array(int *array, size_t size)
+void print_array(const int *array, size_t size)
 {
+	size_t i;
 
-	for (int i = 0; i < size; i++)
+	i = 0;
+	while (array && i < size)
 	{
-	if (i == size - 1)
-	{
-		printf("%d \n", array[i]);
+	if (i > 0)
+	printf(", ");
+	printf("%d", array[i]);
+	++i;
 	}
-	else
-	{
-		printf("%d, ", array[i]);
-	}
-	}
+	printf("\n");
 }
-
 /**
  * bubble_sort - this is the function that sort the array
  * @array: this is the array we will sort
