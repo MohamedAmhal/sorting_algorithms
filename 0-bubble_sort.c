@@ -32,32 +32,18 @@ void print_array(const int *array, size_t size)
 void bubble_sort(int *array, size_t size)
 {
 	int tmp;
-	int a = 0;
 
-	while (a == 0)
-	{
 	for (int i = 0; i < size - 1; i++)
 	{
-	if (array[i] > array[i + 1])
-	{
-		tmp = array[i];
-		array[i] = array[i + 1];
-		array[i + 1] = tmp;
-		print_array(array, size);
-	}
-	}
-	int r = 0;
-
-	for (int j = 0; j < size - 1; j++)
+	for (int j = 0; j < size - 1 - i; j++)
 	{
 	if (array[j] > array[j + 1])
 	{
-		r++;
+		tmp = array[j];
+		array[j] = array[j + 1];
+		array[j + 1] = tmp;
+		print_array(array, size);
 	}
-	}
-	if (r == 0)
-	{
-	a = 1;
 	}
 	}
 }
