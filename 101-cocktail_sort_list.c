@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdbool.h>
 
 /**
  * swap_node_ahead - Swap a node in a listint_t doubly-linked list
